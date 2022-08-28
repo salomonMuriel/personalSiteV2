@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: "#11284b",
     backgroundSize: "cover",
     backgroundPosition: "50%",
-    backgroundImage: `linear-gradient(240deg, rgba(255, 255, 255, 0), #062343), url(${Salomon})`,
+    backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0), #11284b), url(${Salomon})`,
     backgroundRepeat: "no-repeat",
     [theme.fn.smallerThan("sm")]: {
       backgroundSize: "auto 100%",
