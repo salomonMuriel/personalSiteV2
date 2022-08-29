@@ -20,7 +20,8 @@ import { Company } from "./Company";
 const useStyles = createStyles((theme) => ({
     root: {
         backgroundColor: "#11284b",
-        height: 'auto'
+        height: 'auto',
+        overflow: 'hidden'
     },
 
     title: {
@@ -100,32 +101,32 @@ export function Companies() {
 
     return (
         <div className={classes.root}>
-            <Container size='lg'>
+            <Container size='md'>
                 <Title order={2} className={classes.title}>My Companies</Title>
                 <Company
-                    name='Finco.co'
+                    name='Finco'
                     badges={['Proptech', 'SaaS', 'Big Data', 'AI/ML', 'B2C', 'Funded', 'Sold 💸']}
                     img={Finco}
                     description="Large-scale scrapper & Automated Valuation Model for the Real Estate market in Latin America. Sold in 2022 to RED Atlas (USA)."
                     subText="CEO & Co-Founder, Dec 2019 - June 2022"
                 />
                 <Company
-                    name='Beriblock.com'
+                    name='Beriblock'
                     badges={['Fintech', 'Legaltech', 'Blockchain', 'B2B', 'Funded', 'Liquidated 💀']}
                     img={Beriblock}
                     description="Blockchain-based document authentication and signature platform, focused on promissory notes authentication."
                     subText="CEO & Co-Founder, Sep 2018 - Dec 2019. Shareholder, Jan 2020 - Feb 2022"
                 />
                 <Company
-                    name='PrestaGente.com'
+                    name='PrestaGente'
                     badges={['Fintech', 'Blockchain', 'B2B2C', 'Funded', 'Sold 💸']}
                     img={PrestaGente}
                     description="Blockchain-powered online payroll loans for the Colombian market. Sold in 2019 to Taurus Capital."
                     subText="CEO & Co-Founder, Jun 2017 - Sep 2019"
                 />
                 <Company
-                    name='ElPalomo.co'
-                    badges={['SaaS', 'B2C', 'Bootstrapped', 'Liquidated 💀']}
+                    name='ElPalomo'
+                    badges={['Subscription', 'E-Commerce', 'B2C', 'Bootstrapped', 'Liquidated 💀']}
                     img={ElPalomo}
                     description="Online flower subscription service. My first attempt at entrepreneurship. Great learning experience and magnificent case-study on how to go bust in 6 months."
                     subText="CEO & Founder, Dec 2016 - Jun 2017"
@@ -134,19 +135,3 @@ export function Companies() {
         </div>
     );
 }
-
-
-{/* <Title order={3} className={classes.companyName}>Finco.co</Title>
-<Text className={classes.companySubText} size='sm'>CEO, Dec 2019 - June 2022</Text>
-<Box className={classes.badgeHolder}>
-    <Badge color='cyan' className={classes.badge}>Proptech</Badge>
-    <Badge color='blue' className={classes.badge}>Big Data</Badge>
-    <Badge color='indigo' className={classes.badge}>B2C</Badge>
-    <Badge color='darkgreen' className={classes.badge}>Sold 💸</Badge>
-</Box>
-<Space h={20}></Space>
-<Text className={classes.companyText} size='lg'>
-    Large-scale scrapper & Automated Valuation Model for the Real Estate market in Latin America.
-
-    Sold in 2022 to RED Atlas (USA).
-</Text> */}
