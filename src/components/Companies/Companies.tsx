@@ -2,13 +2,6 @@ import {
     createStyles,
     Container,
     Title,
-    Text,
-    Button,
-    Box,
-    Image,
-    Space,
-    Badge,
-    Indicator,
 } from "@mantine/core";
 import Finco from '../../assets/finco.png'
 import Beriblock from '../../assets/beriblock.png'

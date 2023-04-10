@@ -23,10 +23,8 @@ import { IconMail } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundColor: "#11284b",
     backgroundSize: "cover",
-    backgroundPosition: "50%",
-    backgroundImage: `linear-gradient(180deg, rgba(255, 255, 255, 0), #11284b), url(${Salomon})`,
+    backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), #11284b)`,
     backgroundRepeat: "no-repeat",
     [theme.fn.smallerThan("sm")]: {
       backgroundSize: "auto 100%",
@@ -55,6 +53,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan("sm")]: {
       marginRight: 0,
       justifyContent: "space-around",
+      padding: '10px'
     },
     display: "flex",
     flexDirection: "column",
@@ -189,8 +188,8 @@ export function Hero() {
                 under my belt.
               </Text>
               <Text mt={30}>
-                I'm a data scientist who believes that data and tech are the key for
-                competitive companies.
+                I'm an leading data scientist with extensive experience taking complex 
+                data projects to production.
               </Text>
               <Text mt={30}>
                 I'm the father of super-twins, Luca & Franco{" "}
