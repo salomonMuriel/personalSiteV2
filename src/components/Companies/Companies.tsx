@@ -12,7 +12,7 @@ import { Company } from "./Company";
 
 const useStyles = createStyles((theme) => ({
     root: {
-        backgroundColor: "#11284b",
+        background: `linear-gradient(to right, #1C437E, #3A6CB8);`,
         height: 'auto',
         overflow: 'hidden'
     },

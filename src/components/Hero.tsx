@@ -6,6 +6,7 @@ import {
   Button,
   Box,
   ActionIcon,
+  Image
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import Salomon from "../assets/salomon.webp";
@@ -23,19 +24,15 @@ import { IconMail } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    backgroundSize: "cover",
-    backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), #11284b)`,
-    backgroundRepeat: "no-repeat",
-    [theme.fn.smallerThan("sm")]: {
-      backgroundSize: "auto 100%",
-      backgroundPosition: "55%",
-    },
+    background: `linear-gradient(to right, #1C437E, #3A6CB8);`,
     height: "100%",
   },
 
   inner: {
     display: "flex",
     justifyContent: "space-between",
+    flexDirection: "row",
+
 
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
@@ -44,9 +41,12 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    [theme.fn.smallerThan("sm")]: {
-      display: "none",
-    },
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    width: '40%',
+    borderColor: "#162946",
+    borderWidth: "3px",
+    borderRadius: '100%'
   },
 
   content: {
@@ -58,7 +58,7 @@ const useStyles = createStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    height: "100%",
+    height: "100%"
   },
 
   title: {
@@ -94,7 +94,6 @@ const useStyles = createStyles((theme) => ({
 
   description: {
     color: theme.white,
-    opacity: 0.75,
     maxWidth: 500,
     fontWeight: 500,
     fontSize: 20,
@@ -188,57 +187,62 @@ export function Hero() {
                 under my belt.
               </Text>
               <Text mt={30}>
-                I'm an leading data scientist with extensive experience taking complex 
-                data projects to production.
+                I'm an leading data scientist who loves to create through data and innovation.
               </Text>
               <Text mt={30}>
                 I'm the father of super-twins, Luca & Franco{" "}
                 <span ref={ref}>👶👶</span>.
               </Text>
-            </Box>
-            <Box className={classes.buttonBox}>
-              <a href="https://www.linkedin.com/in/smuriel/" target="_blank">
-                <ActionIcon
-                  size="xl"
-                  color="blue"
-                  variant="filled"
-                  className={classes.button}
-                >
-                  <IconBrandLinkedin size={34} />
-                </ActionIcon>
-              </a>
-              <a href="https://github.com/salomonMuriel" target="_blank">
-                <ActionIcon
-                  size="xl"
-                  color="dark"
-                  variant="filled"
-                  className={classes.button}
-                >
-                  <IconBrandGithub size={34} />
-                </ActionIcon>
-              </a>
-              <a href="https://wa.me/573132465100" target="_blank">
-                <ActionIcon
-                  size="xl"
-                  color="green"
-                  variant="filled"
-                  className={classes.button}
-                >
-                  <IconBrandWhatsapp size={34} />
-                </ActionIcon>
-              </a>
-              <a href="mailto:salomon.muriel@gmail.com" target="_blank">
-                <ActionIcon
-                  size="xl"
-                  color="pink"
-                  variant="filled"
-                  className={classes.button}
-                >
-                  <IconMail size={34} />
-                </ActionIcon>
-              </a>
+              <Box className={classes.buttonBox}>
+                <motion.a href="https://www.linkedin.com/in/smuriel/" target="_blank" whileHover={{ scale: 1.2 }}>
+                  <ActionIcon
+                    size="xl"
+                    color="blue"
+                    variant="filled"
+                    className={classes.button}
+                  >
+                    <IconBrandLinkedin size={34} />
+                  </ActionIcon>
+                </motion.a>
+                <motion.a href="https://github.com/salomonMuriel" target="_blank" whileHover={{ scale: 1.2 }}>
+                  <ActionIcon
+                    size="xl"
+                    color="dark"
+                    variant="filled"
+                    className={classes.button}
+                  >
+                    <IconBrandGithub size={34} />
+                  </ActionIcon>
+                </motion.a>
+                <motion.a href="https://wa.me/573132465100" target="_blank" whileHover={{ scale: 1.2 }}>
+                  <ActionIcon
+                    size="xl"
+                    color="green"
+                    variant="filled"
+                    className={classes.button}
+                  >
+                    <IconBrandWhatsapp size={34} />
+                  </ActionIcon>
+                </motion.a>
+                <motion.a href="mailto:salomon.muriel@gmail.com" target="_blank" whileHover={{ scale: 1.2 }}>
+                  <ActionIcon
+                    size="xl"
+                    color="pink"
+                    variant="filled"
+                    className={classes.button}
+                  >
+                    <IconMail size={34} />
+                  </ActionIcon>
+                </motion.a>
+              </Box>
             </Box>
           </div>
+          <motion.img
+            className={classes.image}
+            src={Salomon}
+            whileTap={{ rotate: 360 }}
+            transition={{duration:1.5}}
+             />
         </div>
       </Container>
       <MotionConfig transition={{ duration: 0.6 }}>

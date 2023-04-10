@@ -37,7 +37,7 @@ const useStyles = createStyles((theme) => ({
     display: "grid",
     flexDirection: "row",
     justifyContent: "space-between",
-    background: "linear-gradient(#1c437e, rgba(255,255,255,0) 90%)",
+    background: `linear-gradient(to bottom, #1C437E, #3A6CB8);`,
     // borderRadius: "10px",
     padding: "1.5rem",
     // background: '#11284b',

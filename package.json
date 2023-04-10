@@ -26,6 +26,7 @@
     "grapheme-splitter": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-konami-code": "^2.3.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.7.4",
     "typewriter-effect": "^2.19.0",
