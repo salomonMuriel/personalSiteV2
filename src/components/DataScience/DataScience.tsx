@@ -18,8 +18,6 @@ const useStyles = createStyles((theme) => ({
     },
     title: {
         color: '#11284b',
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontWeight: 900,
         lineHeight: 1.05,
         fontSize: 48,
         paddingTop: theme.spacing.xl * 2,
@@ -67,7 +65,7 @@ export function DataScience() {
     return (
         <div className={classes.root}>
             <Container size={"xl"}>
-                <Title order={2} className={classes.title}>Data Science</Title>
+                <Title order={2} className={classes.title}>Data Science Projects</Title>
                 <Grid>
                     <Grid.Col xs={4}>{child}</Grid.Col>
                     <Grid.Col xs={8}>{child}</Grid.Col>

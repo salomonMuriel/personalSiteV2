@@ -1,9 +1,9 @@
 import { Divider, MantineProvider, Text } from '@mantine/core';
 import React from 'react';
-import { Companies } from './components/Companies/Companies';
 import { Hero } from './components/Hero';
-import ProgressBar from './components/ProgressBar/ProgressBar';
-import { DataScience } from './components/DataScience/DataScience';
+// import { Companies } from './components/Companies/Companies';
+// import ProgressBar from './components/ProgressBar/ProgressBar';
+// import { DataScience } from './components/DataScience/DataScience';
 import { useKonami } from 'react-konami-code';
 
 const easterEgg = () => {
@@ -30,11 +30,17 @@ export default function App() {
         ]
       },
       primaryColor: 'royal-blue',
+      fontFamily: "Pridi, serif",
+      headings: {
+        fontFamily: "Protest Strike, sans-serif",
+        fontWeight: 400
+      },
+      fontFamilyMonospace: "Noto Sans Mono, monospace"
     }}>
-      <ProgressBar/>
+      {/* <ProgressBar/> */}
       <Hero/>
-      <Companies/>
-      <DataScience/>
+      {/* <Companies/>
+      <DataScience/> */}
       {/* <DataScience/> */}
 
     </MantineProvider>

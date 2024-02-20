@@ -24,26 +24,43 @@ import { IconMail } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   root: {
-    background: `linear-gradient(to right, #1C437E, #3A6CB8);`,
-    height: "100%",
+    background: `linear-gradient(to right, #0b1b32, #172b4a);`,
+    height: "100%"
   },
 
   inner: {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "row",
-
-
     [theme.fn.smallerThan("sm")]: {
       flexDirection: "column",
+      justifyContent: "center",
     },
     height: "100%",
+    padding: theme.spacing.lg
   },
 
   image: {
     marginTop: 'auto',
     marginBottom: 'auto',
     width: '40%',
+    [theme.fn.smallerThan("sm")]: {
+      display:'none',
+
+    },
+    borderColor: "#162946",
+    borderWidth: "3px",
+    borderRadius: '100%'
+  },
+
+  imageMobile: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    width: '40%',
+    [theme.fn.smallerThan("sm")]: {
+      width: '80%',
+
+    },
     borderColor: "#162946",
     borderWidth: "3px",
     borderRadius: '100%'
@@ -52,7 +69,7 @@ const useStyles = createStyles((theme) => ({
   content: {
     [theme.fn.smallerThan("sm")]: {
       marginRight: 0,
-      justifyContent: "space-around",
+      justifyContent: "center",
       padding: '10px'
     },
     display: "flex",
@@ -63,15 +80,10 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     color: theme.white,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    lineHeight: 1.05,
-    fontSize: 48,
+    fontSize: theme.fontSizes.xl*2,
 
     [theme.fn.smallerThan("sm")]: {
       maxWidth: "100%",
-      fontSize: 34,
-      lineHeight: 1.15,
     },
     "& span": {
       color: theme.white,
@@ -80,34 +92,28 @@ const useStyles = createStyles((theme) => ({
 
   subtitle: {
     color: "#F6F7F8",
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    lineHeight: 1.05,
-    fontSize: 34,
+    fontSize: theme.fontSizes.lg,
+    fontWeight:500,
 
     [theme.fn.smallerThan("sm")]: {
       maxWidth: "100%",
-      fontSize: 28,
-      lineHeight: 1.15,
     },
   },
 
   description: {
     color: theme.white,
     maxWidth: 500,
-    fontWeight: 500,
-    fontSize: 20,
+    fontSize: theme.fontSizes.md,
+    lineHeight: 0,
     [theme.fn.smallerThan("sm")]: {
       maxWidth: "100%",
-      justifySelf: "end",
-      fontSize: 18,
+      justifySelf: "end"
     },
   },
 
   control: {
     paddingLeft: 50,
     paddingRight: 50,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: 22,
 
     [theme.fn.smallerThan("sm")]: {
@@ -166,10 +172,12 @@ export function Hero() {
                     .typeString("Data Scientist 👨‍🔬")
                     .pauseFor(1000)
                     .deleteAll()
-                    .typeString("Web Developer 👨‍💻")
+                    .typeString("Maker 💡")
                     .pauseFor(1000)
                     .deleteAll()
                     .typeString("Consultant 👨🏼‍💼")
+                    .pauseFor(1000)
+                    .typeString("🔥 Perrenque 🔥")
                     .pauseFor(1000)
                     .deleteAll()
                     .start();
@@ -182,14 +190,14 @@ export function Hero() {
               />
             </Text>
             <Box className={classes.description}>
-              <Text mt={30}>
+              <Text mt={10}>
                 I'm a serial tech entrepreneur with 4 companies and 2 exits
                 under my belt.
               </Text>
-              <Text mt={30}>
+              <Text mt={10}>
                 I'm an leading data scientist who loves to create through data and innovation.
               </Text>
-              <Text mt={30}>
+              <Text mt={10}>
                 I'm the father of super-twins, Luca & Franco{" "}
                 <span ref={ref}>👶👶</span>.
               </Text>
@@ -204,7 +212,7 @@ export function Hero() {
                     <IconBrandLinkedin size={34} />
                   </ActionIcon>
                 </motion.a>
-                <motion.a href="https://github.com/salomonMuriel" target="_blank" whileHover={{ scale: 1.2 }}>
+                {/* <motion.a href="https://github.com/salomonMuriel" target="_blank" whileHover={{ scale: 1.2 }}>
                   <ActionIcon
                     size="xl"
                     color="dark"
@@ -213,7 +221,7 @@ export function Hero() {
                   >
                     <IconBrandGithub size={34} />
                   </ActionIcon>
-                </motion.a>
+                </motion.a> */}
                 <motion.a href="https://wa.me/573132465100" target="_blank" whileHover={{ scale: 1.2 }}>
                   <ActionIcon
                     size="xl"

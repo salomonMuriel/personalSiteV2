@@ -15,3 +15,54 @@ code {
 html, body, #root {
   height: 100%
 }
+
+.noto-sans mono-100 {
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.protest-strike-regular {
+  font-family: "Protest Strike", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pridi-extralight {
+  font-family: "Pridi", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.pridi-light {
+  font-family: "Pridi", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.pridi-regular {
+  font-family: "Pridi", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pridi-medium {
+  font-family: "Pridi", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.pridi-semibold {
+  font-family: "Pridi", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.pridi-bold {
+  font-family: "Pridi", serif;
+  font-weight: 700;
+  font-style: normal;
+}

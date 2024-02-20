@@ -19,15 +19,10 @@ const useStyles = createStyles((theme) => ({
 
     title: {
         color: theme.white,
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontWeight: 900,
-        lineHeight: 1.05,
-        fontSize: 48,
+        fontSize: theme.fontSizes.xl*2,
         marginBottom: theme.spacing.xl * 3,
         [theme.fn.smallerThan("sm")]: {
             maxWidth: "100%",
-            fontSize: 34,
-            lineHeight: 1.15,
         },
         "& span": {
             color: theme.white,
@@ -61,8 +56,6 @@ const useStyles = createStyles((theme) => ({
     },
     companyName: {
         color: theme.white,
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        fontWeight: 900,
         lineHeight: 1.05,
         fontSize: 44,
         [theme.fn.smallerThan("sm")]: {

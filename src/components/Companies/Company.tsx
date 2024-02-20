@@ -75,14 +75,10 @@ const useStyles = createStyles((theme) => ({
   },
   companyName: {
     color: theme.white,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    lineHeight: 1.05,
-    fontSize: 44,
+    fontSize: theme.fontSizes.xl*1.8,
     [theme.fn.smallerThan("sm")]: {
       maxWidth: "100%",
       fontSize: 30,
-      lineHeight: 1.15,
     },
     "& span": {
       color: theme.white,
@@ -167,8 +163,11 @@ export function Company(props: CompanyProps) {
       case "Liquidated 💀":
         color = "dark";
         break;
+      case "Blockchain":
+        color = "teal";
+        break;
       default:
-        color = "";
+        color = "grape";
     }
 
     return (
