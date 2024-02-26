@@ -3,12 +3,8 @@ import {
   Container,
   Title,
   Text,
-  Button,
   Box,
-  ActionIcon,
-  Image
-} from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+  ActionIcon} from "@mantine/core";
 import Salomon from "../assets/salomon.webp";
 import Typewriter from "typewriter-effect";
 import GraphemeSplitter from "grapheme-splitter";
@@ -18,7 +14,6 @@ import Luca from "../assets/luca_cut.webp";
 import React from "react";
 import { useHover } from "@mantine/hooks";
 import { IconBrandLinkedin } from "@tabler/icons";
-import { IconBrandGithub } from "@tabler/icons";
 import { IconBrandWhatsapp } from "@tabler/icons";
 import { IconMail } from "@tabler/icons";
 
@@ -43,23 +38,10 @@ const useStyles = createStyles((theme) => ({
   image: {
     marginTop: 'auto',
     marginBottom: 'auto',
-    width: '40%',
+    maxWidth: '40%',
+    maxHeight: '100%',
     [theme.fn.smallerThan("sm")]: {
       display:'none',
-
-    },
-    borderColor: "#162946",
-    borderWidth: "3px",
-    borderRadius: '100%'
-  },
-
-  imageMobile: {
-    marginTop: 'auto',
-    marginBottom: 'auto',
-    width: '40%',
-    [theme.fn.smallerThan("sm")]: {
-      width: '80%',
-
     },
     borderColor: "#162946",
     borderWidth: "3px",
@@ -177,7 +159,8 @@ export function Hero() {
                     .deleteAll()
                     .typeString("Consultant 👨🏼‍💼")
                     .pauseFor(1000)
-                    .typeString("🔥 Perrenque 🔥")
+                    .deleteAll()
+                    .typeString("🔥Perrenque🔥")
                     .pauseFor(1000)
                     .deleteAll()
                     .start();
